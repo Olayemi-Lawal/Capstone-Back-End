@@ -12,6 +12,11 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Capstone Backend API');
+});
+
+
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/movies', movieRoutes);
